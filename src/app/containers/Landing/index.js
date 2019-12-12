@@ -1,27 +1,24 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
 
 import './index.css';
 
 // import usabilityImage from 'Images/usability.png';
 
 @connect((state) => ({
-  ...state
-}), (dispatch) => ({
-
-}))
+    ...state
+}), (dispatch) => ({}))
 export default class Landing extends Component {
-  state = {
-    counter: 0,
-  }
+    state = {
+        counter: 0,
+    };
 
-  onButtonPressed = () => {
-    let { counter } = this.state;
-    this.setState({
-      counter: ++counter,
-    });
-  }
+    onButtonPressed = () => {
+        let {counter} = this.state;
+        this.setState({
+            counter: ++counter,
+        });
+    };
 
   render() {
     const { counter } = this.state;

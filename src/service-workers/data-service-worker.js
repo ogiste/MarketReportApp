@@ -9,8 +9,8 @@ self.addEventListener('activate', (event) => {
 });
 
 self.addEventListener('resize', (event) => {
-  console.log('resized');
-})
+    console.log('resized');
+});
 
 self.addEventListener('fetch', (event) => {
   console.log('[event]', event);

@@ -5,13 +5,13 @@ const initialState = {
 };
 
 const actionsMap = {
-  [ItemActionTypes.SET_BEFORE_INSTALL_PROMPT_FIRE](state, { payload }) {
-    return {
-      ...state,
-      hasBeforeInstallPromptBeenFired: payload,
+    [ItemActionTypes.SET_BEFORE_INSTALL_PROMPT_FIRE](state, {payload}) {
+        return {
+            ...state,
+            hasBeforeInstallPromptBeenFired: payload,
+        }
     }
-  }
-}
+};
 
 export default function items(state = initialState, action) {
   const reduceFn = actionsMap[action.type];

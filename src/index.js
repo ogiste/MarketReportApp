@@ -1,17 +1,16 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import WebFont from 'webfontloader';
 import App from './app';
 
 import createBrowserHistory from 'history/createBrowserHistory';
 import configureStore from './app/flux/configureStore';
+import * as ServiceWorkersManager from './service-workers';
 
 const createdBrowserHistory = createBrowserHistory();
 
 const initialState = {};
 const store = configureStore(initialState, createdBrowserHistory);
-
-import * as ServiceWorkersManager from './service-workers';
 
 const mountPoint = document.getElementById("app");
 

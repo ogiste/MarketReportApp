@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import styled, { ThemeProvider } from 'styled-components';
-import { Helmet } from "react-helmet";
+import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
+import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux';
+import styled, {ThemeProvider} from 'styled-components';
+import {Helmet} from "react-helmet";
 
 import * as AppActions from 'Flux/app/actions';
 
@@ -43,16 +43,16 @@ export default class MainLayout extends Component {
   onInstallButtonClicked = () => {
     window.deferredInstallPrompt.prompt();
 
-    window.deferredInstallPrompt.userChoice.then((choiceResult) => {
-      if (choiceResult.outcome === 'accepted') {
-        console.log('User accepted the A2HS prompt');
-      } else {
-        console.log('User dismissed the A2HS prompt');
-      }
-      window.deferredInstallPrompt = null;
-      AppActions.setBeforeInstallPromptFire(false);
-    });
-  }
+      window.deferredInstallPrompt.userChoice.then((choiceResult) => {
+          if (choiceResult.outcome === 'accepted') {
+              console.log('User accepted the A2HS prompt');
+          } else {
+              console.log('User dismissed the A2HS prompt');
+          }
+          window.deferredInstallPrompt = null;
+          AppActions.setBeforeInstallPromptFire(false);
+      });
+  };
 
   render() {
     const { app } = this.props;
