@@ -1,7 +1,7 @@
 import React from 'react';
 import {makeStyles} from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
+import SummaryCard from "../SummaryCard";
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -20,13 +20,16 @@ export default function Dashboard() {
 
     return (
         <div className={classes.root}>
-            <Grid container spacing={3}>
-                <Grid item xs={12} sm={6}>
-                    <Paper className={classes.paper}>xs=12 sm=6</Paper>
-                </Grid>
-                <Grid item xs={12} sm={6}>
-                    <Paper className={classes.paper}>xs=12 sm=6</Paper>
-                </Grid>
+            {/* We need the container for the gutters to the left and right */}
+            {/* We will also need a container for passing in all the required Summary data as an array (each element
+            is a card with summary e.g Top Segments
+            */}
+            <Grid container justify="space-between" spacing={3}>
+                <SummaryCard/>
+            </Grid>
+            {/*Container for the Table data*/}
+            <Grid container justify="space-between" spacing={3}>
+                <SummaryCard/>
             </Grid>
         </div>
     );
