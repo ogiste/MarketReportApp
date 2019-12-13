@@ -65,7 +65,14 @@ export default class MainLayout extends Component {
             <meta name="background-color" content={theme.darkPrimaryColor} />
           </Helmet>
           <aside className="main" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-            <Link to="/" style={{ color: '#fff', fontSize: 25, textDecoration: 'none', textTransform: 'uppercase', fontWeight: 'bold', marginLeft: 10 }}>Spring Board</Link>
+            <Link to="/" style={{
+                color: '#fff',
+                fontSize: 25,
+                textDecoration: 'none',
+                textTransform: 'uppercase',
+                fontWeight: 'bold',
+                marginLeft: 10
+            }}>Market Report</Link>
             {
               app.hasBeforeInstallPromptBeenFired && !(window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true) ? (
                 <button
