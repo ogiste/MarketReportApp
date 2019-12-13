@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import Container from "@material-ui/core/Container";
+import Dashboard from "../../components/Dashboard";
 
 import './index.css';
 
@@ -23,11 +25,9 @@ export default class Landing extends Component {
   render() {
     const { counter } = this.state;
     return (
-      <section style={{ margin: 10 }}>
-        <h1>Build something amazing</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <button onClick={this.onButtonPressed}>{`Pressed ${counter} times`}</button>
-      </section>
+        <Container maxWidth="md">
+            <Dashboard/>
+        </Container>
     );
   }
 }
